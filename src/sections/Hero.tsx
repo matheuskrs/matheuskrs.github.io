@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import fullbody from '../assets/pixel/fullbody-front.webp';
+import { TermText } from '../buddy/TermText';
 import { CvActions } from '../components/CvActions';
 import { Icon } from '../components/Icon';
 import { profile } from '../data/contacts';
@@ -20,7 +21,9 @@ export function Hero() {
             {profile.name}
           </h1>
           <p className={styles.lead}>{t.hero.lead}</p>
-          <p className={styles.body}>{t.hero.body}</p>
+          <p className={styles.body}>
+            <TermText text={t.hero.body} />
+          </p>
           <div className={styles.actions}>
             <a className={styles.primary} href="#projects">
               {t.hero.ctaProjects}

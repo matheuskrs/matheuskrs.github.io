@@ -38,7 +38,7 @@ export const ptBR = {
   hero: {
     eyebrow: 'Desenvolvedor Web Pleno · Full stack',
     lead: 'Desenvolvo aplicações web completas com C#/.NET, React e Next.js: da interface à API, das regras de negócio ao banco de dados.',
-    body: 'Hoje trabalho num sistema de gestão jurídica na Nexus e dou aulas de frontend na Cosmos Educa. Por conta própria, mantenho dois projetos publicados: o Concord e o Deepwokendle.',
+    body: 'Hoje trabalho num sistema de gestão jurídica na Nexus e dou aulas de frontend na Cosmos Educa. Por conta própria, mantenho dois projetos publicados: o {concord} e o {deepwokendle}.',
     facts: [
       { label: 'Agora', value: 'Desenvolvedor Pleno na Nexus' },
       { label: 'Em paralelo', value: 'Professor de Frontend na Cosmos Educa' },
@@ -446,6 +446,10 @@ export const ptBR = {
     comeBack: 'Chamar o Matheus de volta',
     askSuffix: '(perguntar ao Matheus)',
     terms: {
+      concord:
+        'Trabalhar no Concord é extremamente divertido, pois é o projeto que mais tenho usuários e problemas reais, hoje existem ~4400 contas criadas. Isso é gratificante!',
+      deepwokendle:
+        'Eu desenvolvi o Deepwokendle e conforme fui melhorando no código, também fui aprimorando ele, é quase um medidor das minhas habilidades que foi evoluindo junto comigo!',
       csharp:
         'C# é a linguagem que mais uso no backend: está na API da Nexus, nos sistemas em que trabalhei na UPPER, no Concord e no Deepwokendle.',
       aspnetcore:

@@ -3,10 +3,10 @@ import flyingSprite from '../assets/pixel/buddy-flying.webp';
 import holdingSprite from '../assets/pixel/buddy-holding.webp';
 import sittingSprite from '../assets/pixel/buddy-sitting.webp';
 import { Icon } from '../components/Icon';
-import { skillAreas } from '../data/skills';
 import { useI18n } from '../i18n/useI18n';
 import { prefersReducedMotion, squash } from '../utils/squash';
 import styles from './BuddyWidget.module.css';
+import { termLabel } from './termLabel';
 
 export interface BuddyMessage {
   id: string;
@@ -44,7 +44,6 @@ const sprites: Record<Mode, string> = {
   gone: sittingSprite,
 };
 
-const skillNames = Object.fromEntries(skillAreas.flatMap((area) => area.skills.map((skill) => [skill.id, skill.name])));
 
 const popFrames: Keyframe[] = [{ transform: 'scale(0.2)' }, { transform: 'scale(1.06)', offset: 0.7 }, { transform: 'scale(1)' }];
 const closeFrames: Keyframe[] = [{ transform: 'scale(1)' }, { transform: 'scale(0)' }];
@@ -315,7 +314,7 @@ export function BuddyWidget({ message, onAsk, onClose, ref }: Props) {
   }, [clampInside, place]);
 
   const isIntro = message?.id === INTRO;
-  const title = message && !isIntro ? (t.skills.names[message.id] ?? skillNames[message.id]) : null;
+  const title = message && !isIntro ? termLabel(message.id, t.skills.names) : null;
   const body = message ? (isIntro ? t.buddy.intro : t.buddy.terms[message.id]) : '';
   const showBubble = Boolean(message && body && mode === 'idle');
 

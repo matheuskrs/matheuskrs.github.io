@@ -40,7 +40,7 @@ export const enUS: Messages = {
   hero: {
     eyebrow: 'Mid-level Web Developer · Full stack',
     lead: 'I build complete web applications with C#/.NET, React and Next.js: from the interface to the API, from business rules to the database.',
-    body: 'I currently work on a legal management platform at Nexus and teach frontend development at Cosmos Educa. On my own, I maintain two live projects: Concord and Deepwokendle.',
+    body: 'I currently work on a legal management platform at Nexus and teach frontend development at Cosmos Educa. On my own, I maintain two live projects: {concord} and {deepwokendle}.',
     facts: [
       { label: 'Now', value: 'Mid-level Developer at Nexus' },
       { label: 'Alongside', value: 'Frontend Instructor at Cosmos Educa' },
@@ -447,6 +447,10 @@ export const enUS: Messages = {
     comeBack: 'Bring Matheus back',
     askSuffix: '(ask Matheus)',
     terms: {
+      concord:
+        'Working on Concord is a lot of fun, because it is the project where I have the most users and real problems: there are about 4,400 accounts today. That is rewarding!',
+      deepwokendle:
+        'I built Deepwokendle, and as my code got better, I kept improving it too. It is almost a gauge of my skills that grew along with me!',
       csharp:
         'C# is the language I use most on the backend: it is in the Nexus API, in the systems I worked on at UPPER, in Concord and in Deepwokendle.',
       aspnetcore:
