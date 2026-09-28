@@ -30,6 +30,8 @@
   bottom: calc(100% + 10px);
   left: 50%;
   z-index: 5;
+  /* Sem isso, em termos curtos a caixa encolhe até a metade da largura do termo e o texto vaza para a direita. */
+  width: max-content;
   translate: -50% 0;
   filter: drop-shadow(3px 3px 0 var(--color-wood));
   transform: scale(0);
