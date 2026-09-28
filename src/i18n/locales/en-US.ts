@@ -63,7 +63,7 @@ export const enUS: Messages = {
     kicker: 'About',
     title: 'I take a feature from the interface all the way to the database.',
     paragraphs: [
-      'I am a web developer working mainly with C#/.NET on the backend and React and Next.js on the frontend. In practice, that means owning a whole feature: the screen and the form, validation, the endpoint, the business rule, the migration and the test.',
+      'I am a web developer working mainly with C#/.NET on the backend and React and Next.js on the frontend. With time and dedication, I can build every part of a feature! The screen and the form, validation, the endpoint, the business rule, the migration and the test.',
       'I started as an intern at UPPER Consultoria in December 2024 and was hired as a junior developer in June 2025. During that time, I began supporting new interns through onboarding and teaching the backend and frontend tracks of FDevs.',
       'Since June 2026 I have been a mid-level developer at Nexus and, since August, a frontend instructor at Cosmos Educa.',
     ],
@@ -129,7 +129,6 @@ export const enUS: Messages = {
       ],
       sim: {
         title: 'How video reaches the viewers',
-        disclaimer: 'Illustrative simulation. It uses no camera, screen or network.',
         modeLabel: 'Streaming path',
         direct: 'Direct (P2P)',
         sfu: 'Through the SFU',
@@ -182,7 +181,7 @@ export const enUS: Messages = {
     deepwokendle: {
       kicker: 'Personal project · since 2024',
       tagline: 'A daily guessing game for the Deepwoken community.',
-      need: 'Inspired by Pokedle, the game picks a monster from Deepwoken, a Roblox game, every day. With each guess, every attribute shows whether it is right, partially right or wrong, until the player reaches the answer.',
+      need: 'Inspired by Pokedle, the game picks a monster from Deepwoken every day. With each guess, every attribute shows whether it is right, partially right or wrong, until the player reaches the answer.',
       features: [
         'A daily challenge shared by everyone, plus an {infinite|infinite mode} with win streaks.',
         'User accounts, daily, monthly and all-time leaderboards, and streak history.',
@@ -198,7 +197,7 @@ export const enUS: Messages = {
         },
         {
           title: 'The same challenge for everyone',
-          body: 'The monster of the day is drawn on the first request of the day (UTC) and stored in PostgreSQL. Suggestions that are not yet approved never enter the draw.',
+          body: 'The monster of the day is drawn on the first request of the day (based on UTC time) and stored in the database (if you are the first one in, you are the one who draws the monster, and then everyone else enjoys your draw). And of course, suggested monsters that have not been approved never enter the draw; only I (an admin) can approve them.',
         },
         {
           title: 'Chat rate-limited on the server',
@@ -212,19 +211,19 @@ export const enUS: Messages = {
           'Deepwokendle board with one guess: each attribute sits in its own tile, red when wrong and green when right.',
         animationAlt:
           'Screen recording of Deepwokendle: a guess on the board, streak history, the leaderboard and the community suggestions page.',
-        caption: 'Recording of the live game. Monster images belong to the Deepwoken universe.',
+        caption: 'Recording of the live game.',
       },
       demo: {
         title: 'Guess the technology',
         disclaimer:
-          'A demo of the format, made for this portfolio. It is not the game: the answers are technologies that appear on this site.',
+          'Curious to know how Deepwokendle worked? Try it out!',
         inputLabel: 'Your guess',
         placeholder: 'Type a technology',
         submit: 'Guess',
         newRound: 'New round',
         reveal: 'Show answer',
         attempts: 'Attempts: {count}',
-        empty: 'No guesses yet. Start with something you would use on a backend.',
+        empty: 'No guesses from you yet. Start with a technology you would use yourself!',
         columns: {
           name: 'Technology',
           area: 'Area',
@@ -258,7 +257,7 @@ export const enUS: Messages = {
       },
       'concord-landing': {
         alt: 'Concord home page, in Portuguese, with the headline "Your screen, live, only for who you let in." and the buttons Sign in with Discord and Download for Windows.',
-        caption: 'Public home page. The window on the right is an illustration that is part of the page.',
+        caption: 'Public home page.',
       },
       'sinlabs-profiles': {
         alt: 'Sinlabs Access Roles screen, in Portuguese: search, status filter, a New role button and a table with roles such as Administrator, Coordinator and Technician, each with a permission count, creation date and Active or Inactive status.',
@@ -321,7 +320,7 @@ export const enUS: Messages = {
         ],
       },
       cosmos: {
-        summary: 'Frontend classes at an independent teaching project, alongside my work at Nexus.',
+        summary: 'Here I teach frontend classes at the Cosmos project, alongside my work at Nexus.',
         highlights: [],
       },
     },
@@ -406,8 +405,8 @@ export const enUS: Messages = {
     kicker: 'Beyond code',
     title: 'Programming and games.',
     paragraphs: [
-      'Outside of work, my main interests are programming and games, and my personal projects show a bit of both.',
-      'Deepwokendle is the most direct example: a game made for a community of players, with leaderboards, chat and monsters suggested by the players themselves. The pixel art character that follows you around this site is my in-game version.',
+      'Outside of work, my main interests are programming and games, and my own projects show a bit of that.',
+      'Deepwokendle is the most direct example in practice! It was a game made for a community of players, with leaderboards, chat and monsters suggested by the players themselves. It was my first hosted project with real users, and it lives in my heart.',
     ],
     bustAlt: 'Matheus in pixel art, with glasses and a black shirt, smiling sideways.',
     emotesLabel: 'Character reactions',
@@ -421,8 +420,8 @@ export const enUS: Messages = {
   },
   contact: {
     kicker: 'Contact',
-    title: 'Have a role or a project in mind?',
-    body: 'Email is the most direct way to reach me. I am also on LinkedIn and GitHub.',
+    title: 'Want to talk, have a role, or a project in mind?',
+    body: 'Email is the most direct way! I am also on LinkedIn and GitHub.',
     emailLabel: 'Email',
     copy: 'Copy email',
     send: 'Write an email',

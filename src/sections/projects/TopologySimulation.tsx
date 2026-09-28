@@ -58,7 +58,6 @@ export function TopologySimulation() {
     <div className={styles.sim}>
       <div className={styles.top}>
         <h4 className={styles.title}>{sim.title}</h4>
-        <p className={styles.disclaimer}>{sim.disclaimer}</p>
       </div>
 
       <div className={styles.controls}>

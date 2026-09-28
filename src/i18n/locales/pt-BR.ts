@@ -127,7 +127,6 @@ export const ptBR = {
       ],
       sim: {
         title: 'Como o vídeo chega a quem assiste',
-        disclaimer: 'Simulação ilustrativa. Não usa câmera, tela nem rede.',
         modeLabel: 'Caminho da transmissão',
         direct: 'Direto (P2P)',
         sfu: 'Via SFU',
@@ -181,7 +180,7 @@ export const ptBR = {
     deepwokendle: {
       kicker: 'Projeto próprio · desde 2024',
       tagline: 'Um jogo diário de adivinhação para a comunidade de Deepwoken.',
-      need: 'Inspirado no Pokedle, o jogo sorteia um monstro de Deepwoken, um jogo do Roblox, a cada dia. A cada palpite, cada atributo mostra se está certo, parcialmente certo ou errado, até a pessoa chegar à resposta.',
+      need: 'Inspirado no Pokedle, o jogo sorteia um monstro do jogo Deepwoken a cada dia. A cada palpite, cada atributo mostra se está certo, parcialmente certo ou errado, até a pessoa chegar à resposta.',
       features: [
         'Desafio diário igual para todos e {infinite|modo infinito} com sequência de acertos.',
         'Contas de usuário, placares diário, mensal e geral, e histórico de sequências.',
@@ -257,7 +256,7 @@ export const ptBR = {
       },
       'concord-landing': {
         alt: 'Página inicial do Concord com o título "Sua tela, ao vivo, só para quem você deixar entrar." e os botões Entrar com Discord e Baixar para Windows.',
-        caption: 'Página inicial pública. A janela à direita é uma ilustração da própria página.',
+        caption: 'Página inicial pública.',
       },
       'sinlabs-profiles': {
         alt: 'Tela Perfis de Acesso do Sinlabs: busca, filtro de status, botão Novo perfil e tabela com perfis como Administrador, Coordenador e Técnico, cada um com quantidade de permissões, data de criação e status Ativo ou Inativo.',
