@@ -101,7 +101,7 @@
   font-weight: 800;
 }
 
-.more[open] summary::before {
+.more[open]:not([data-closing]) summary::before {
   content: '−';
 }
 

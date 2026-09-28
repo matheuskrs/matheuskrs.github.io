@@ -2,6 +2,7 @@ import { ZoomableImage } from '../../components/ZoomableImage';
 import { projects } from '../../data/projects';
 import { useReveal } from '../../hooks/useReveal';
 import { useI18n } from '../../i18n/useI18n';
+import { slideDetails } from '../../utils/slideDetails';
 import styles from './ConcordCase.module.css';
 import { ProjectDecisions, ProjectFacts, ProjectHeader } from './ProjectParts';
 import { TopologySimulation } from './TopologySimulation';
@@ -48,7 +49,7 @@ export function ConcordCase() {
         <ProjectDecisions id="concord" />
 
         <details className={styles.more}>
-          <summary>{copy.moreTitle}</summary>
+          <summary onClick={slideDetails}>{copy.moreTitle}</summary>
           <ul>
             {copy.more.map((item) => (
               <li key={item}>{item}</li>
