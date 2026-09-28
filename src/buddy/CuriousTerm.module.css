@@ -32,9 +32,9 @@
   z-index: 5;
   /* Sem isso, em termos curtos a caixa encolhe até a metade da largura do termo e o texto vaza para a direita. */
   width: max-content;
-  translate: -50% 0;
   filter: drop-shadow(3px 3px 0 var(--color-wood));
-  transform: scale(0);
+  /* Centralização e escala no mesmo transform: o minificador do build descarta `translate` quando a regra também tem `transform`. */
+  transform: translateX(-50%) scale(0);
   transform-origin: 50% calc(100% + 10px);
   transition: transform 180ms ease-in-out;
   pointer-events: none;
@@ -42,12 +42,12 @@
 
 @media (hover: hover) {
   .term:hover .tip {
-    transform: scale(1);
+    transform: translateX(-50%) scale(1);
   }
 }
 
 .term:focus-visible .tip {
-  transform: scale(1);
+  transform: translateX(-50%) scale(1);
 }
 
 .tipFrame,
