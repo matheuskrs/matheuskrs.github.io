@@ -32,11 +32,7 @@ O tema segue `prefers-color-scheme` até a primeira escolha manual. Os dois são
 
 ## Currículo
 
-Os PDFs ficam em `public/cv/`. Ao substituir um deles, gere de novo a imagem de pré-visualização:
-
-```bash
-python scripts/render-cv-previews.py   # requer PyMuPDF e Pillow
-```
+Os PDFs ficam em `public/cv/`.
 
 ## Créditos
 

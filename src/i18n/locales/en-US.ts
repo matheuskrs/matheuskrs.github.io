@@ -445,6 +445,7 @@ export const enUS: Messages = {
     close: 'Close speech bubble',
     comeBack: 'Bring Matheus back',
     askSuffix: '(ask Matheus)',
+    tooltip: 'Ask?',
     titles: {
       infinite: 'Infinite mode',
       barracred: 'Barracred Conecta',

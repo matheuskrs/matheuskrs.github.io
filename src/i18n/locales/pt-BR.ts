@@ -444,6 +444,7 @@ export const ptBR = {
     close: 'Fechar balão',
     comeBack: 'Chamar o Matheus de volta',
     askSuffix: '(perguntar ao Matheus)',
+    tooltip: 'Perguntar?',
     titles: {
       infinite: 'Modo infinito',
       barracred: 'Barracred Conecta',

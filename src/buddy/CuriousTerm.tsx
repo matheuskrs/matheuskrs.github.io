@@ -19,6 +19,12 @@ export function CuriousTerm({ id, children }: CuriousTermProps) {
     <button type="button" className={styles.term} onClick={() => ask(id)}>
       {children}
       <span className="visually-hidden"> {t.buddy.askSuffix}</span>
+      <span className={styles.tip} aria-hidden="true">
+        <span className={styles.tipFrame}>
+          <span className={styles.tipInner}>{t.buddy.tooltip}</span>
+        </span>
+        <span className={styles.tipTail} />
+      </span>
     </button>
   );
 }
