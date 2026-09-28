@@ -184,7 +184,7 @@ export const enUS: Messages = {
       tagline: 'A daily guessing game for the Deepwoken community.',
       need: 'Inspired by Pokedle, the game picks a monster from Deepwoken, a Roblox game, every day. With each guess, every attribute shows whether it is right, partially right or wrong, until the player reaches the answer.',
       features: [
-        'A daily challenge shared by everyone, plus an infinite mode with win streaks.',
+        'A daily challenge shared by everyone, plus an {infinite|infinite mode} with win streaks.',
         'User accounts, daily, monthly and all-time leaderboards, and streak history.',
         'Real-time global chat for signed-in players.',
         'Community suggestions for new monsters, with votes and admin approval.',
@@ -280,7 +280,7 @@ export const enUS: Messages = {
   },
   experience: {
     kicker: 'Experience',
-    title: 'From intern to mid-level, with teaching alongside.',
+    title: 'From intern to mid-level!',
     ladderLabel: 'Career progression',
     lanes: {
       main: 'Main track',
@@ -446,7 +446,23 @@ export const enUS: Messages = {
     close: 'Close speech bubble',
     comeBack: 'Bring Matheus back',
     askSuffix: '(ask Matheus)',
+    titles: {
+      infinite: 'Infinite mode',
+      barracred: 'Barracred Conecta',
+      intern: 'Internship',
+      junior: 'Junior',
+      mid: 'Mid-level',
+    },
     terms: {
+      infinite: 'Can you believe one player reached 1,000 correct guesses in a row without missing a single one!?',
+      barracred:
+        'This course was amazing for me. It introduced me to programming in a way that made me fall in love with it. The people I met there are amazing, and they are still part of my life today.',
+      intern:
+        'This internship was one of the best experiences I have had, because that is where I proved my worth and kept improving. Facing challenges from huge clients, I learned the hard way how to write code with quality and efficiency. And of course, I made friends there for life.',
+      junior:
+        'By then I was more experienced with the environment, the system and the code, so I passed my knowledge on to people joining the team, while working on even more complex tasks.',
+      mid:
+        'This is my current and biggest challenge. As a full stack developer, I build tasks from start to finish, implementing complex and optimized processes and logic. Even architecture decisions are part of it. And when I have questions, I ask the masters!',
       concord:
         'Working on Concord is a lot of fun, because it is the project where I have the most users and real problems: there are about 4,400 accounts today. That is rewarding!',
       deepwokendle:

@@ -183,7 +183,7 @@ export const ptBR = {
       tagline: 'Um jogo diário de adivinhação para a comunidade de Deepwoken.',
       need: 'Inspirado no Pokedle, o jogo sorteia um monstro de Deepwoken, um jogo do Roblox, a cada dia. A cada palpite, cada atributo mostra se está certo, parcialmente certo ou errado, até a pessoa chegar à resposta.',
       features: [
-        'Desafio diário igual para todos e modo infinito com sequência de acertos.',
+        'Desafio diário igual para todos e {infinite|modo infinito} com sequência de acertos.',
         'Contas de usuário, placares diário, mensal e geral, e histórico de sequências.',
         'Chat global em tempo real para quem está logado.',
         'Sugestões de novos monstros pela comunidade, com votos e aprovação de administradores.',
@@ -445,7 +445,23 @@ export const ptBR = {
     close: 'Fechar balão',
     comeBack: 'Chamar o Matheus de volta',
     askSuffix: '(perguntar ao Matheus)',
+    titles: {
+      infinite: 'Modo infinito',
+      barracred: 'Barracred Conecta',
+      intern: 'Estágio',
+      junior: 'Júnior',
+      mid: 'Pleno',
+    } as Record<string, string>,
     terms: {
+      infinite: 'Você acredita que tem um usuário que chegou a 1000 acertos seguidos sem errar uma vez sequer!?',
+      barracred:
+        'Esse curso foi incrível pra mim, ele me apresentou para a programação. E de uma forma que me fez me apaixonar. As pessoas que conheci lá são incríveis, e fazem parte de mim até hoje.',
+      intern:
+        'Esse estágio foi uma das melhores experiências que tive, pois foi lá que consegui provar todo meu valor e me aprimorar ainda mais, com desafios vindo de clientes gigantes eu aprendi à força a como programar com qualidade e com eficiência. E claro, de lá, fiz amigos que levarei para a vida toda.',
+      junior:
+        'Aqui eu já estava mais experiente com o ambiente, com o sistema, e com o código, então eu repassava o meu conhecimento para quem entrava na equipe, e estava com tarefas mais complexas ainda.',
+      mid:
+        'Aqui é o meu atual e maior desafio, como fullstack, eu desenvolvo tarefas do início ao fim implementando processos e lógicas complexas e otimizadas. Até mesmo decisões de arquitetura são necessárias. E eventualmente, quando tenho dúvidas, pergunto para os mestres!',
       concord:
         'Trabalhar no Concord é extremamente divertido, pois é o projeto que mais tenho usuários e problemas reais, hoje existem ~4400 contas criadas. Isso é gratificante!',
       deepwokendle:

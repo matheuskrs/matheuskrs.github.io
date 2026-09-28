@@ -1,4 +1,5 @@
 import { CuriousTerm } from '../../buddy/CuriousTerm';
+import { TermText } from '../../buddy/TermText';
 import { Icon } from '../../components/Icon';
 import { projects } from '../../data/projects';
 import { skillIdByName } from '../../data/skills';
@@ -72,7 +73,9 @@ export function ProjectFacts({ id, columns = false }: PartProps & { columns?: bo
         <h4 className={styles.label}>{labels.features}</h4>
         <ul className={styles.features}>
           {copy.features.map((feature) => (
-            <li key={feature}>{feature}</li>
+            <li key={feature}>
+              <TermText text={feature} />
+            </li>
           ))}
         </ul>
       </section>

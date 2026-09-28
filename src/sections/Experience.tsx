@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react';
+import { CuriousTerm } from '../buddy/CuriousTerm';
 import { SectionHeader } from '../components/SectionHeader';
 import { careerLadder, experience, type Experience as ExperienceEntry } from '../data/experience';
 import type { YearMonth } from '../data/types';
@@ -69,7 +70,9 @@ export function Experience() {
           {careerLadder.map((step, index) => (
             <li key={step.id} className={styles.step} style={{ '--step': index } as CSSProperties} data-current={index === careerLadder.length - 1}>
               <span className={styles.stepBlock} aria-hidden="true" />
-              <span className={styles.stepName}>{t.experience.ladder[step.id]}</span>
+              <span className={styles.stepName}>
+                <CuriousTerm id={step.id}>{t.experience.ladder[step.id]}</CuriousTerm>
+              </span>
               <time className={styles.stepDate} dateTime={step.start}>
                 {formatYearMonth(step.start, locale)}
               </time>

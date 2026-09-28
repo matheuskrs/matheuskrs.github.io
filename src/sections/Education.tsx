@@ -1,3 +1,4 @@
+import { CuriousTerm } from '../buddy/CuriousTerm';
 import { SectionHeader } from '../components/SectionHeader';
 import { education, languages, type Education as EducationItem } from '../data/education';
 import { useReveal } from '../hooks/useReveal';
@@ -26,7 +27,9 @@ function Card({ item, featured = false }: { item: EducationItem; featured?: bool
     <li className={styles.card} data-featured={featured}>
       <p className={styles.kind}>{t.education.kinds[item.kind]}</p>
       <h4 className={styles.title}>{copy.title}</h4>
-      <p className={styles.institution}>{item.institution}</p>
+      <p className={styles.institution}>
+        <CuriousTerm id={item.id}>{item.institution}</CuriousTerm>
+      </p>
       <p className={styles.years}>
         <Years item={item} />
       </p>

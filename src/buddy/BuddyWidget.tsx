@@ -314,7 +314,7 @@ export function BuddyWidget({ message, onAsk, onClose, ref }: Props) {
   }, [clampInside, place]);
 
   const isIntro = message?.id === INTRO;
-  const title = message && !isIntro ? termLabel(message.id, t.skills.names) : null;
+  const title = message && !isIntro ? (t.buddy.titles[message.id] ?? termLabel(message.id, t.skills.names)) : null;
   const body = message ? (isIntro ? t.buddy.intro : t.buddy.terms[message.id]) : '';
   const showBubble = Boolean(message && body && mode === 'idle');
 
