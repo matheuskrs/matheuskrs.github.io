@@ -6,6 +6,7 @@ import { Icon } from '../components/Icon';
 import { useI18n } from '../i18n/useI18n';
 import { prefersReducedMotion, squash } from '../utils/squash';
 import styles from './BuddyWidget.module.css';
+import { pickLine, takeIntro } from './buddyLines';
 import { termLabel } from './termLabel';
 
 export interface BuddyMessage {
@@ -28,6 +29,8 @@ interface Props {
 }
 
 const INTRO = 'intro';
+/** Prefixo das falas soltas do mini Matheus, como "line:ouch". */
+const LINE = 'line:';
 /** Velocidade de soltura, em px/ms, a partir da qual o personagem é arremessado para fora. */
 const THROW_SPEED = 1.2;
 const GRAVITY = 0.0028;
@@ -261,7 +264,7 @@ export function BuddyWidget({ message, onAsk, onClose, ref }: Props) {
       suppressClick.current = false;
       return;
     }
-    onAsk(INTRO);
+    onAsk(takeIntro() ? INTRO : `${LINE}${pickLine(Object.keys(t.buddy.lines))}`);
   };
 
   const requestClose = useCallback(() => {
@@ -314,8 +317,10 @@ export function BuddyWidget({ message, onAsk, onClose, ref }: Props) {
   }, [clampInside, place]);
 
   const isIntro = message?.id === INTRO;
-  const title = message && !isIntro ? (t.buddy.titles[message.id] ?? termLabel(message.id, t.skills.names)) : null;
-  const body = message ? (isIntro ? t.buddy.intro : t.buddy.terms[message.id]) : '';
+  const lineKey = message?.id.startsWith(LINE) ? message.id.slice(LINE.length) : null;
+  const lines: Record<string, string> = t.buddy.lines;
+  const title = message && !isIntro && !lineKey ? (t.buddy.titles[message.id] ?? termLabel(message.id, t.skills.names)) : null;
+  const body = message ? (isIntro ? t.buddy.intro : lineKey ? lines[lineKey] : t.buddy.terms[message.id]) : '';
   const showBubble = Boolean(message && body && mode === 'idle');
 
   return (

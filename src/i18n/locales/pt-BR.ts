@@ -445,6 +445,33 @@ export const ptBR = {
     comeBack: 'Chamar o Matheus de volta',
     askSuffix: '(perguntar ao Matheus)',
     tooltip: 'Perguntar?',
+    lines: {
+      ouch: 'Ai!',
+      engaged: 'Eu sou noivo e estou em um relacionamento há 4 anos! Eu amo a minha moça.',
+      mom: 'Eu amo a minha mãe. Ela é um dos pilares mais importantes da minha vida.',
+      barracred: 'Eu sou muito grato ao Barracred Conecta.',
+      tryYourBest:
+        'Você não concorda que é melhor ter tentado o seu máximo e não ter conseguido do que nunca ter sequer tentado? Vai lá, tenta!',
+      missUpper: 'Eu sinto saudades da Upper..!',
+      sleepEarly: 'Hoje você vai dormir cedo!!',
+      aiWorld: 'Você acha que a IA vai dominar o mundo?',
+      gameDev: 'Sabia que eu também desenvolvo jogos? Não coloquei aqui, mas eu já fiz projetos em Luau e na Unity!',
+      pineapple: 'Se você for o primeiro a ver isso, me manda uma mensagem falando "Abacaxi" que eu te mando 5 reais!',
+      throwMe: 'Sabia que dá pra me arrastar? E se me jogar rápido, eu saio voando!',
+      darkMode: 'Já testou o tema escuro? O botão fica lá em cima, do lado do idioma.',
+      crystalBall: 'Minha bola de cristal diz: sim!',
+      crystalBallNo: 'Minha bola de cristal diz: não!',
+      myMachine: 'Na minha máquina funciona!',
+      bugOrFeature: 'Achou um bug..? Tem certeza de que não é uma... feature?',
+      testsFirst: 'Hmm... você já tentou reiniciar a máquina?',
+      survived:
+        'Você já sobreviveu a dias que, em algum momento, achou que não conseguiria suportar. Consegue olhar pra trás e lembrar?',
+      pastSelf: 'Seu eu de alguns anos atrás provavelmente ficaria orgulhoso de coisas que hoje você considera normais.',
+      ownTime: 'Talvez você não esteja atrasado. Talvez esteja apenas vivendo no seu próprio tempo.',
+      futureYou: 'Existem versões suas no futuro que só vão existir porque você decidiu continuar hoje.',
+      missNormal: 'Um dia você vai sentir saudade de coisas que hoje parecem completamente comuns.',
+      weird: 'Às vezes eu digo coisas poéticas, né? Eu sou um pouco estranho, eu sei, mas eu gosto de ser assim!'
+    },
     titles: {
       infinite: 'Modo infinito',
       barracred: 'Barracred Conecta',
