@@ -1,0 +1,236 @@
+.game {
+  display: grid;
+  gap: var(--space-5);
+  padding: var(--space-5);
+  border: 2px solid var(--color-ink);
+  border-radius: var(--radius-xs);
+  background: var(--color-surface-raised);
+  box-shadow: 8px 8px 0 var(--color-wood);
+}
+
+@media (min-width: 40em) {
+  .game {
+    padding: var(--space-6);
+  }
+}
+
+.header {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: center;
+}
+
+.emote {
+  display: grid;
+  place-items: center;
+  width: 5.5rem;
+  height: 5.5rem;
+  border: 2px solid var(--color-ink);
+  border-radius: var(--radius-xs);
+  background: var(--color-paper);
+}
+
+.emote img {
+  width: auto;
+  max-width: 4.75rem;
+  max-height: 4.75rem;
+  animation: pop 420ms var(--ease-out);
+}
+
+.intro {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 400;
+}
+
+.disclaimer {
+  color: var(--color-ink-muted);
+  font-size: var(--text-sm);
+}
+
+.form {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.label {
+  font-weight: 700;
+  font-size: var(--text-sm);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.select {
+  flex: 1 1 14rem;
+  min-width: 0;
+}
+
+.submit {
+  min-height: 44px;
+  padding: 0 var(--space-5);
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  font-weight: 700;
+}
+
+.submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.status {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.status p:first-child {
+  min-height: 1.5em;
+}
+
+.attempts {
+  color: var(--color-ink-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.board {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  min-width: 30rem;
+  border-collapse: separate;
+  border-spacing: 4px;
+  table-layout: fixed;
+}
+
+.table thead th {
+  padding-bottom: var(--space-1);
+  color: var(--color-ink-muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.cell {
+  position: relative;
+  height: 4.25rem;
+  padding: var(--space-2);
+  border: 2px solid var(--color-ink);
+  border-radius: var(--radius-xs);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  vertical-align: middle;
+  animation: flip 520ms var(--ease-out) both;
+}
+
+.cell[data-result='correct'] {
+  background: #4f8a5e;
+  color: #f6efe3;
+}
+
+.cell[data-result='partial'] {
+  background: #d9b25a;
+  color: #2b1f18;
+}
+
+.cell[data-result='wrong'],
+.cell[data-result='higher'],
+.cell[data-result='lower'] {
+  background: #a8453a;
+  color: #f6efe3;
+}
+
+.value {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.mark {
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+.cell[data-result='higher'] .mark,
+.cell[data-result='lower'] .mark {
+  position: static;
+  display: block;
+  margin-top: 2px;
+  font-size: 1rem;
+}
+
+.empty {
+  padding: var(--space-5);
+  border: 2px dashed var(--color-line-strong);
+  border-radius: var(--radius-xs);
+  color: var(--color-ink-muted);
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.secondary,
+.ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 2.75rem;
+  padding: 0 var(--space-4);
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: var(--text-sm);
+}
+
+.secondary {
+  border: 2px solid var(--color-ink);
+  background: transparent;
+  color: var(--color-ink);
+}
+
+.ghost {
+  border: 0;
+  background: none;
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+@keyframes flip {
+  from {
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.7) translateY(6px);
+  }
+}

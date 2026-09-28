@@ -1,0 +1,53 @@
+/* As setas laterais do antd não têm rótulo acessível; a navegação fica na barra abaixo. */
+.root :global(.ant-image-preview-switch) {
+  display: none;
+}
+
+.root :global(.ant-image-preview-close) {
+  color: #f0e5d5;
+}
+
+.flip {
+  transform: scaleX(-1);
+}
+
+.toolbar {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-3);
+  max-width: min(90vw, 44rem);
+  text-align: center;
+}
+
+.caption {
+  color: #f0e5d5;
+  font-size: var(--text-sm);
+}
+
+.buttons {
+  display: flex;
+  gap: var(--space-2);
+  padding: var(--space-1);
+  border-radius: var(--radius-sm);
+  background: rgb(18 13 9 / 0.85);
+}
+
+.buttons button {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  border-radius: var(--radius-xs);
+  background: transparent;
+  color: #f0e5d5;
+}
+
+.buttons button:hover:not(:disabled) {
+  background: rgb(240 229 213 / 0.12);
+}
+
+.buttons button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}

@@ -1,0 +1,174 @@
+.contact {
+  position: relative;
+  padding-top: var(--section-gap);
+  background:
+    radial-gradient(ellipse 60% 50% at 10% 0%, rgb(227 164 110 / 0.1), transparent 70%),
+    var(--color-espresso);
+  color: var(--color-espresso-ink);
+  overflow: hidden;
+}
+
+.contact :global(a:focus-visible),
+.contact :global(button:focus-visible) {
+  outline-color: var(--color-stage-accent);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-6);
+  align-items: end;
+}
+
+@media (min-width: 56em) {
+  .grid {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  }
+}
+
+.copy {
+  display: grid;
+  gap: var(--space-5);
+  padding-bottom: var(--space-8);
+}
+
+.kicker {
+  color: var(--color-stage-accent);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 400;
+  line-height: var(--leading-tight);
+}
+
+.body {
+  max-width: 34rem;
+  color: var(--color-espresso-muted);
+  font-size: var(--text-lg);
+}
+
+.email {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-2);
+  padding-block: var(--space-5);
+  border-block: 1px solid rgb(240 229 213 / 0.14);
+}
+
+.emailLabel,
+.linkLabel {
+  display: block;
+  color: var(--color-espresso-muted);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+}
+
+.emailLink {
+  color: var(--color-espresso-ink);
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 0.8rem + 2.2vw, 2.5rem);
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+  text-decoration-color: var(--color-stage-accent);
+  text-decoration-thickness: 2px;
+}
+
+.emailLink:hover {
+  color: var(--color-stage-accent);
+}
+
+.emailRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3) var(--space-4);
+}
+
+.emailActions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.iconButton {
+  display: inline-grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid rgb(240 229 213 / 0.45);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-espresso-ink);
+  transition:
+    border-color var(--duration-fast) ease,
+    color var(--duration-fast) ease,
+    transform var(--duration-fast) var(--ease-out);
+}
+
+.iconButton:hover {
+  border-color: var(--color-stage-accent);
+  color: var(--color-stage-accent);
+  transform: translateY(-2px);
+}
+
+.iconButton:active {
+  transform: translateY(0) scale(0.94);
+}
+
+.feedback {
+  min-height: 1.5em;
+  color: var(--color-stage-signal);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.links {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.links {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+}
+
+.links a {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 3.5rem;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid rgb(240 229 213 / 0.14);
+  border-radius: var(--radius-sm);
+  color: var(--color-espresso-ink);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: border-color var(--duration-fast) ease;
+}
+
+.links a:hover {
+  border-color: var(--color-stage-accent);
+  color: var(--color-espresso-ink);
+}
+
+.cv {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.cv :global(button) {
+  color: var(--color-stage-accent);
+}
+
+.sprite {
+  justify-self: center;
+  width: min(100%, 24rem);
+  margin-bottom: -2px;
+}

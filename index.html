@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var locale = 'pt-BR';
+        var theme = 'light';
+        try {
+          var matchLocale = function (value) {
+            if (/^en/i.test(value)) return 'en-US';
+            if (/^pt/i.test(value)) return 'pt-BR';
+            return null;
+          };
+          var fromQuery = matchLocale(new URLSearchParams(location.search).get('lang') || '');
+          var stored = localStorage.getItem('locale');
+          if (fromQuery) {
+            locale = fromQuery;
+            localStorage.setItem('locale', fromQuery);
+          } else if (stored === 'pt-BR' || stored === 'en-US') {
+            locale = stored;
+          } else {
+            var languages = navigator.languages || [navigator.language];
+            for (var i = 0; i < languages.length; i++) {
+              var match = matchLocale(languages[i] || '');
+              if (match) {
+                locale = match;
+                break;
+              }
+            }
+          }
+          var storedTheme = localStorage.getItem('theme');
+          if (storedTheme === 'light' || storedTheme === 'dark') {
+            theme = storedTheme;
+          } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            theme = 'dark';
+          }
+        } catch (error) {
+          if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) theme = 'dark';
+        }
+        root.lang = locale;
+        root.dataset.theme = theme;
+      })();
+    </script>
+    <title>Matheus Rodrigues · Desenvolvedor Web Full Stack</title>
+    <meta
+      name="description"
+      content="Portfólio de Matheus Rodrigues, desenvolvedor web pleno com atuação full stack em C#/.NET, React e Next.js. Projetos, experiência, formação e contato."
+    />
+    <meta name="theme-color" content="#f3ebdd" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1c1511" media="(prefers-color-scheme: dark)" />
+    <link rel="canonical" href="https://matheuskrs.github.io/" />
+    <link rel="alternate" hreflang="pt-BR" href="https://matheuskrs.github.io/?lang=pt" />
+    <link rel="alternate" hreflang="en" href="https://matheuskrs.github.io/?lang=en" />
+    <link rel="alternate" hreflang="x-default" href="https://matheuskrs.github.io/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://matheuskrs.github.io/" />
+    <meta property="og:title" content="Matheus Rodrigues · Desenvolvedor Web Full Stack" />
+    <meta
+      property="og:description"
+      content="Desenvolvedor web pleno com atuação full stack em C#/.NET, React e Next.js."
+    />
+    <meta property="og:image" content="https://matheuskrs.github.io/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Personagem em pixel art de Matheus Rodrigues sorrindo, de óculos e camisa preta." />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <p style="padding: 1rem; font-family: system-ui, sans-serif">
+        Este portfólio precisa de JavaScript. Contato: matheuskrs308@gmail.com ·
+        <a href="https://github.com/matheuskrs">github.com/matheuskrs</a>
+      </p>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

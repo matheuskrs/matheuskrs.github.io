@@ -1,0 +1,32 @@
+.deepwokendle {
+  padding-block: var(--space-9);
+  background:
+    repeating-linear-gradient(0deg, transparent 0 47px, rgb(138 90 54 / 0.08) 47px 48px),
+    repeating-linear-gradient(90deg, transparent 0 47px, rgb(138 90 54 / 0.08) 47px 48px);
+}
+
+.lead {
+  display: grid;
+  gap: var(--space-7);
+  align-items: start;
+}
+
+@media (min-width: 56em) {
+  .lead {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  }
+}
+
+.game {
+  max-width: 52rem;
+  margin: var(--space-8) auto 0;
+}
+
+.placeholder {
+  display: grid;
+  place-items: center;
+  min-height: 24rem;
+  border: 2px dashed var(--color-line-strong);
+  border-radius: var(--radius-xs);
+  color: var(--color-ink-muted);
+}

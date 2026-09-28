@@ -1,0 +1,32 @@
+.button {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+}
+
+.button img {
+  width: 100%;
+}
+
+.badge {
+  position: absolute;
+  right: var(--space-2);
+  bottom: var(--space-2);
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--radius-xs);
+  background: rgb(18 13 9 / 0.78);
+  color: #f0e5d5;
+  transition: transform var(--duration) var(--ease-out);
+}
+
+.button:hover .badge,
+.button:focus-visible .badge {
+  transform: scale(1.12);
+}

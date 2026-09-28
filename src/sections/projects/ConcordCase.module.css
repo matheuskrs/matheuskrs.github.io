@@ -1,0 +1,121 @@
+.concord {
+  padding-block: var(--space-9);
+  background:
+    radial-gradient(ellipse 70% 50% at 85% 0%, rgb(227 164 110 / 0.1), transparent 70%),
+    var(--color-stage);
+  color: var(--color-stage-ink);
+}
+
+.lead {
+  display: grid;
+  gap: var(--space-7);
+  align-items: start;
+}
+
+@media (min-width: 56em) {
+  .lead {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  }
+}
+
+.gallery {
+  display: grid;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+@media (min-width: 56em) {
+  .gallery {
+    grid-template-columns: 1.2fr 1fr;
+    align-items: start;
+  }
+
+  .window:nth-child(3) {
+    margin-top: var(--space-8);
+  }
+}
+
+.window {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.chrome {
+  display: flex;
+  gap: 6px;
+  padding: 9px 12px;
+  border: 1px solid var(--color-stage-line);
+  border-bottom: 0;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  background: var(--color-stage-raised);
+}
+
+.chrome span {
+  width: 8px;
+  height: 8px;
+  background: var(--color-stage-line);
+}
+
+.window :global(button) {
+  margin-top: calc(-1 * var(--space-3));
+  border: 1px solid var(--color-stage-line);
+  box-shadow: 0 30px 60px -30px rgb(0 0 0 / 0.8);
+}
+
+.window figcaption {
+  color: var(--color-stage-muted);
+  font-size: var(--text-sm);
+}
+
+.more {
+  margin-top: var(--space-7);
+  border-top: 1px solid var(--color-stage-line);
+  border-bottom: 1px solid var(--color-stage-line);
+}
+
+.more summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 3.25rem;
+  color: var(--color-stage-ink);
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
+.more summary::-webkit-details-marker {
+  display: none;
+}
+
+.more summary::before {
+  content: '+';
+  display: inline-grid;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--color-stage-line);
+  color: var(--color-stage-accent);
+  font-weight: 800;
+}
+
+.more[open] summary::before {
+  content: '−';
+}
+
+.more summary:focus-visible {
+  outline-color: var(--color-stage-accent);
+}
+
+.more ul {
+  display: grid;
+  gap: var(--space-3);
+  max-width: 48rem;
+  padding: 0 0 var(--space-5) var(--space-5);
+  color: var(--color-stage-muted);
+}
+
+.concord :global(a:focus-visible),
+.concord :global(button:focus-visible) {
+  outline-color: var(--color-stage-accent);
+}

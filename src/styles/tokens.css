@@ -1,0 +1,122 @@
+/*
+  Breakpoints (usados literalmente nas media queries, espelhados em src/utils/breakpoints.ts):
+  sm 40em (640px) · md 56em (896px) · lg 75em (1200px) · xl 100em (1600px)
+*/
+
+:root {
+  --font-display: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'Manrope Variable', 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-md: 1.0625rem;
+  --text-lg: 1.25rem;
+  --text-xl: clamp(1.5rem, 1.2rem + 1vw, 1.875rem);
+  --text-2xl: clamp(2rem, 1.4rem + 2.2vw, 3rem);
+  --text-3xl: clamp(2.5rem, 1.6rem + 3.6vw, 4.25rem);
+  --text-hero: clamp(3rem, 1.4rem + 6.6vw, 7rem);
+
+  --leading-tight: 1.05;
+  --leading-snug: 1.3;
+  --leading-body: 1.65;
+  --tracking-caps: 0.14em;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+  --section-gap: clamp(var(--space-8), 10vw, var(--space-10));
+
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-pill: 999px;
+
+  --container: 72rem;
+  --container-wide: 84rem;
+  --container-text: 40rem;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-steps: steps(3, end);
+  --duration-fast: 160ms;
+  --duration: 320ms;
+  --duration-slow: 640ms;
+
+  --header-height: 4rem;
+
+  color-scheme: light;
+  --color-bg: #f3ebdd;
+  --color-surface: #e9ddc8;
+  --color-surface-raised: #faf5ec;
+  --color-ink: #2b1f18;
+  --color-ink-muted: #6a5444;
+  --color-accent: #9a4a26;
+  --color-accent-hover: #7f3b1c;
+  --color-on-accent: #fbf6ee;
+  --color-wood: #8a5a36;
+  --color-wood-light: #c39a6b;
+  --color-wood-deep: #5e3a22;
+  --color-line: #d5c4aa;
+  --color-line-strong: #b89f80;
+  --color-signal: #3d6a4c;
+  --color-partial: #7a5a10;
+  --color-danger: #9b2c22;
+  --color-focus: #9a4a26;
+  --color-paper: #f6efe3;
+  --color-stage: #19130f;
+  --color-stage-raised: #241b15;
+  --color-stage-ink: #efe4d3;
+  --color-stage-muted: #b8a38b;
+  --color-stage-line: #3b2e25;
+  --color-stage-accent: #e3a46e;
+  --color-stage-signal: #8fbf98;
+  --color-espresso: #21170f;
+  --color-espresso-ink: #f0e5d5;
+  --color-espresso-muted: #c7b199;
+
+  --shadow-sm: 0 1px 2px rgb(43 31 24 / 0.08);
+  --shadow-md: 0 6px 20px -8px rgb(43 31 24 / 0.25);
+  --shadow-lg: 0 24px 48px -24px rgb(43 31 24 / 0.4);
+  --shadow-pixel: 4px 4px 0 rgb(43 31 24 / 0.16);
+
+  --grain-opacity: 0.35;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --color-bg: #1c1511;
+  --color-surface: #281e18;
+  --color-surface-raised: #31251d;
+  --color-ink: #f0e5d5;
+  --color-ink-muted: #bca58c;
+  --color-accent: #e3a46e;
+  --color-accent-hover: #f0b985;
+  --color-on-accent: #21170f;
+  --color-wood: #b98457;
+  --color-wood-light: #7a5236;
+  --color-wood-deep: #4a2f1d;
+  --color-line: #3d2e24;
+  --color-line-strong: #5a4535;
+  --color-signal: #8fbf98;
+  --color-partial: #e2c26d;
+  --color-danger: #ec8f80;
+  --color-focus: #e3a46e;
+  --color-paper: #efe4d2;
+  --color-stage: #130e0b;
+  --color-stage-raised: #1f1712;
+  --color-espresso: #120d09;
+
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.3);
+  --shadow-md: 0 8px 24px -10px rgb(0 0 0 / 0.6);
+  --shadow-lg: 0 24px 56px -24px rgb(0 0 0 / 0.75);
+  --shadow-pixel: 4px 4px 0 rgb(0 0 0 / 0.35);
+
+  --grain-opacity: 0.18;
+}
