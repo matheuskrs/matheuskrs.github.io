@@ -438,6 +438,41 @@ export const ptBR = {
     source: 'Código deste site no GitHub',
     backToTop: 'Voltar ao topo',
   },
+  buddy: {
+    label: 'Mini Matheus. Clique para saber o que ele faz; arraste para mudar de lugar.',
+    intro:
+      'Opa! Se você encontrar no site alguma coisa sobre mim que te deixe curioso e ela estiver destacada, é só clicar nela que eu respondo o que sei!',
+    close: 'Fechar balão',
+    comeBack: 'Chamar o Matheus de volta',
+    askSuffix: '(perguntar ao Matheus)',
+    terms: {
+      csharp:
+        'C# é a linguagem que mais uso no backend: está na API da Nexus, nos sistemas em que trabalhei na UPPER, no Concord e no Deepwokendle.',
+      aspnetcore:
+        'Montei as APIs do Concord e do Deepwokendle com ASP.NET Core. Na Nexus, a API é um monólito modular organizado em camadas de Clean Architecture.',
+      react:
+        'React está em quase tudo que faço no frontend: nas telas da Nexus, no Concord, nas interfaces do Sinlabs e no Deepwokendle, que reescrevi saindo do jQuery.',
+      nextjs: 'Uso Next.js no sistema de gestão jurídica da Nexus, junto com TypeScript e Ant Design.',
+      typescript:
+        'TypeScript está na Nexus, no Concord e na versão atual do Deepwokendle, que reescrevi a partir de JavaScript com jQuery.',
+      postgresql:
+        'PostgreSQL guarda os dados da Nexus, do Concord e do Deepwokendle. No Deepwokendle, é nele que fica registrado o monstro do dia, igual para todo mundo.',
+      sqlserver:
+        'Na UPPER, trabalhei com SQL Server escrevendo triggers e procedures para integrações de pagamento e relatórios.',
+      redis:
+        'Já usei Redis em projetos profissionais. No Concord, a presença nas salas ainda fica em memória, mas atrás de uma interface pensada para trocar por Redis.',
+      signalr:
+        'Uso SignalR no que precisa chegar em tempo real: presença e eventos de sala no Concord e o chat global do Deepwokendle.',
+      webrtc:
+        'É o WebRTC que leva as telas no Concord, direto entre as pessoas ou pelo SFU. A API cuida só da sinalização e das permissões.',
+      electron: 'O app desktop do Concord é feito em Electron. É nele que fica a captura de áudio só do aplicativo compartilhado.',
+      antd: 'Na Nexus, padronizei formulários, filtros, dropdowns e grids com Ant Design. Este site também usa alguns componentes dele.',
+      docker: 'O Concord roda em contêineres Docker, junto com o Nginx e um relay TURN.',
+      xunit: 'Na Nexus, as alterações de persistência e de regras de negócio vêm com testes unitários em xUnit.',
+      clean: 'A API da Nexus é organizada em camadas de Clean Architecture, dentro de um monólito modular num monorepositório.',
+      ai: 'Quando integro APIs de IA, trato com guardrails: valido entradas e saídas e tomo cuidado com dados sensíveis.',
+    } as Record<string, string>,
+  },
   viewer: {
     label: 'Visualizador de imagens',
     close: 'Fechar visualizador',

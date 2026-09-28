@@ -1,5 +1,7 @@
+import { CuriousTerm } from '../../buddy/CuriousTerm';
 import { Icon } from '../../components/Icon';
 import { projects } from '../../data/projects';
+import { skillIdByName } from '../../data/skills';
 import type { ProjectId } from '../../data/types';
 import { useI18n } from '../../i18n/useI18n';
 import styles from './Project.module.css';
@@ -82,7 +84,9 @@ export function ProjectFacts({ id, columns = false }: PartProps & { columns?: bo
         <h4 className={styles.label}>{labels.stack}</h4>
         <ul role="list" className={styles.stack}>
           {projects[id].stack.map((tech) => (
-            <li key={tech}>{tech === 'REST' ? t.skills.names.rest : tech}</li>
+            <li key={tech}>
+              <CuriousTerm id={skillIdByName[tech] ?? ''}>{tech === 'REST' ? t.skills.names.rest : tech}</CuriousTerm>
+            </li>
           ))}
         </ul>
       </section>

@@ -94,3 +94,8 @@ export const guessableSkills: GuessableSkill[] = skillAreas.flatMap((area) =>
     skill.kind && skill.released ? [{ ...skill, kind: skill.kind, released: skill.released, area: area.id }] : [],
   ),
 );
+
+/** Relaciona o nome exibido nas stacks dos projetos ao id da tecnologia. */
+export const skillIdByName: Record<string, string> = Object.fromEntries(
+  skillAreas.flatMap((area) => area.skills.map((skill) => [skill.name, skill.id])),
+);

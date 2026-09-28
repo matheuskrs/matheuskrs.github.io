@@ -1,0 +1,227 @@
+.buddy {
+  --buddy-size: 7rem;
+  --step: 4px;
+  position: fixed;
+  right: var(--space-4);
+  bottom: var(--space-4);
+  z-index: 40;
+  width: var(--buddy-size);
+  height: var(--buddy-size);
+}
+
+@media (max-width: 39.99em) {
+  .buddy {
+    --buddy-size: 5.25rem;
+  }
+}
+
+.buddy[data-mode='gone'] {
+  display: none;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: grab;
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.buddy[data-mode='dragging'] .button {
+  cursor: grabbing;
+}
+
+.buddy[data-mode='flying'] .button,
+.buddy[data-mode='arriving'] .button {
+  pointer-events: none;
+}
+
+.sprite {
+  width: 100%;
+  height: 100%;
+  transform-origin: 50% 100%;
+  filter: drop-shadow(3px 4px 0 rgb(0 0 0 / 0.18));
+  user-select: none;
+  -webkit-user-drag: none;
+  transition: transform 120ms var(--ease-out);
+}
+
+.button[data-pressed='true'] .sprite {
+  transform: scale(1.1, 0.86);
+}
+
+.buddy[data-mode='dragging'] .sprite {
+  transform-origin: 50% 4%;
+  transition: transform 260ms var(--ease-out);
+}
+
+.buddy[data-mode='flying'] .sprite {
+  transform-origin: 50% 50%;
+  transition: none;
+}
+
+/* Balão de fala com borda em degraus de pixel */
+
+.bubble {
+  --tail-offset: calc(var(--buddy-size) * 0.5 - 8px);
+  position: absolute;
+  bottom: calc(100% + 14px);
+  right: 0;
+  width: max-content;
+  max-width: min(19rem, calc(100vw - 2 * var(--space-4)));
+  filter: drop-shadow(4px 4px 0 var(--color-wood));
+  transform-origin: calc(100% - var(--tail-offset)) calc(100% + 14px);
+}
+
+.buddy[data-horizontal='left'] .bubble {
+  right: auto;
+  left: 0;
+  transform-origin: var(--tail-offset) calc(100% + 14px);
+}
+
+.buddy[data-vertical='below'] .bubble {
+  top: calc(100% + 14px);
+  bottom: auto;
+  transform-origin: calc(100% - var(--tail-offset)) -14px;
+}
+
+.buddy[data-vertical='below'][data-horizontal='left'] .bubble {
+  transform-origin: var(--tail-offset) -14px;
+}
+
+.frame,
+.bubbleInner {
+  clip-path: polygon(
+    0 calc(var(--step) * 2),
+    var(--step) calc(var(--step) * 2),
+    var(--step) var(--step),
+    calc(var(--step) * 2) var(--step),
+    calc(var(--step) * 2) 0,
+    calc(100% - var(--step) * 2) 0,
+    calc(100% - var(--step) * 2) var(--step),
+    calc(100% - var(--step)) var(--step),
+    calc(100% - var(--step)) calc(var(--step) * 2),
+    100% calc(var(--step) * 2),
+    100% calc(100% - var(--step) * 2),
+    calc(100% - var(--step)) calc(100% - var(--step) * 2),
+    calc(100% - var(--step)) calc(100% - var(--step)),
+    calc(100% - var(--step) * 2) calc(100% - var(--step)),
+    calc(100% - var(--step) * 2) 100%,
+    calc(var(--step) * 2) 100%,
+    calc(var(--step) * 2) calc(100% - var(--step)),
+    var(--step) calc(100% - var(--step)),
+    var(--step) calc(100% - var(--step) * 2),
+    0 calc(100% - var(--step) * 2)
+  );
+}
+
+.frame {
+  padding: 3px;
+  background: var(--color-ink);
+}
+
+.bubbleInner {
+  position: relative;
+  display: grid;
+  gap: var(--space-1);
+  padding: var(--space-3) var(--space-7) var(--space-3) var(--space-4);
+  background: var(--color-surface-raised);
+  color: var(--color-ink);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+
+.bubbleTitle {
+  color: var(--color-accent);
+  font-size: var(--text-xs);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.close {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  display: grid;
+  place-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 0;
+  border-radius: var(--radius-xs);
+  background: transparent;
+  color: var(--color-ink-muted);
+}
+
+.close:hover {
+  background: var(--color-surface);
+  color: var(--color-ink);
+}
+
+/* Cauda em escadinha apontando para a cabeça do personagem */
+.tail {
+  position: absolute;
+  top: calc(100% - 3px);
+  right: var(--tail-offset);
+  width: 16px;
+  height: 16px;
+  background: var(--color-ink);
+  clip-path: polygon(0 0, 100% 0, 100% 25%, 75% 25%, 75% 50%, 50% 50%, 50% 75%, 25% 75%, 25% 100%, 0 100%);
+}
+
+.tail::after {
+  content: '';
+  position: absolute;
+  inset: 0 3px 3px 3px;
+  background: var(--color-surface-raised);
+  clip-path: polygon(0 0, 100% 0, 100% 10%, 70% 10%, 70% 40%, 40% 40%, 40% 70%, 0 70%);
+}
+
+.buddy[data-horizontal='left'] .tail {
+  right: auto;
+  left: var(--tail-offset);
+  transform: scaleX(-1);
+}
+
+.buddy[data-vertical='below'] .tail {
+  top: auto;
+  bottom: calc(100% - 3px);
+  transform: scaleY(-1);
+}
+
+.buddy[data-vertical='below'][data-horizontal='left'] .tail {
+  transform: scale(-1, -1);
+}
+
+/* Botão para trazer o personagem de volta */
+
+.comeBack {
+  position: fixed;
+  right: var(--space-4);
+  bottom: var(--space-4);
+  z-index: 40;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 2.75rem;
+  padding: 0 var(--space-4);
+  border: 2px solid var(--color-ink);
+  border-radius: var(--radius-xs);
+  background: var(--color-surface-raised);
+  box-shadow: 4px 4px 0 var(--color-wood);
+  color: var(--color-ink);
+  font-size: var(--text-sm);
+  font-weight: 700;
+}
+
+.comeBack:hover {
+  border-color: var(--color-accent);
+}
+
+.comeBackIcon {
+  rotate: 180deg;
+}

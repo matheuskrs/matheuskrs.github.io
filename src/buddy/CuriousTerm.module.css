@@ -1,0 +1,40 @@
+.term {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+  cursor: help;
+}
+
+.text {
+  text-decoration: underline dotted;
+  text-decoration-color: var(--term-accent, var(--color-accent));
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.22em;
+}
+
+.mark {
+  display: inline-grid;
+  place-items: center;
+  width: 0.95rem;
+  height: 0.95rem;
+  margin-top: -0.35em;
+  border-radius: 2px;
+  background: var(--term-accent, var(--color-accent));
+  color: var(--term-on-accent, var(--color-on-accent));
+  font-size: 0.62rem;
+  font-weight: 900;
+  line-height: 1;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.term:hover .mark,
+.term:focus-visible .mark {
+  transform: translateY(-2px) rotate(-8deg);
+}

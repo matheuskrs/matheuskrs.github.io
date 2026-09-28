@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { CuriousTerm } from '../buddy/CuriousTerm';
 import { SectionHeader } from '../components/SectionHeader';
 import { contexts, skillAreas, type Skill } from '../data/skills';
 import type { ContextId } from '../data/types';
@@ -43,7 +44,7 @@ export function Skills() {
                 {area.skills.map((skill) => (
                   <li key={skill.id} className={styles.item} data-core={Boolean(skill.core)} data-match={matchState(skill)}>
                     <span className={styles.name}>
-                      {nameOf(skill)}
+                      <CuriousTerm id={skill.id}>{nameOf(skill)}</CuriousTerm>
                       {skill.core && <span className={styles.core}>{t.skills.core}</span>}
                       {filter && skill.usedIn.includes(filter) && (
                         <span className="visually-hidden">

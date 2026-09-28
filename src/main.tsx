@@ -5,6 +5,7 @@ import './styles/base.css';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { App } from './App';
+import { BuddyProvider } from './buddy/BuddyProvider';
 import { ImageViewerProvider } from './components/ImageViewerProvider';
 import { I18nProvider } from './i18n/I18nProvider';
 import { ThemeProvider } from './theme/ThemeProvider';
@@ -14,7 +15,9 @@ createRoot(document.getElementById('root')!).render(
     <ThemeProvider>
       <I18nProvider>
         <ImageViewerProvider>
-          <App />
+          <BuddyProvider>
+            <App />
+          </BuddyProvider>
         </ImageViewerProvider>
       </I18nProvider>
     </ThemeProvider>

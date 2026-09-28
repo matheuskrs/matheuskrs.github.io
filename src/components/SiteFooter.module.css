@@ -29,6 +29,13 @@
   outline-color: var(--color-stage-accent);
 }
 
+/* Espaço para o mini Matheus, fixo no canto inferior direito, não cobrir os links. */
+@media (max-width: 89.99em) {
+  .footer {
+    padding-bottom: 7.5rem;
+  }
+}
+
 .top {
   margin-left: auto;
 }
