@@ -1,20 +1,14 @@
 .header {
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 20;
   background: var(--color-bg);
   border-bottom: 1px solid transparent;
   transition: border-color var(--duration) ease;
 }
 
-@media (min-width: 56em) {
-  .header {
-    position: sticky;
-    top: 0;
-  }
-
-  .header[data-scrolled='true'] {
-    border-bottom-color: var(--color-line);
-  }
+.header[data-scrolled='true'] {
+  border-bottom-color: var(--color-line);
 }
 
 .bar {
