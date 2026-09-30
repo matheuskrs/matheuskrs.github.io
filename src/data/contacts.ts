@@ -37,15 +37,15 @@ const resumeFile = (fileName: string) => `${import.meta.env.BASE_URL}cv/${fileNa
 
 export const resumes: Record<Locale, Resume> = {
   'pt-BR': {
-    href: resumeFile('Matheus_Rodrigues_Desenvolvedor.pdf'),
-    fileName: 'Matheus_Rodrigues_Desenvolvedor.pdf',
+    href: resumeFile('Matheus_Rodrigues.pdf'),
+    fileName: 'Matheus_Rodrigues.pdf',
     preview: cvPreviewPt,
     previewWidth: 1323,
     previewHeight: 1871,
   },
   'en-US': {
-    href: resumeFile('Matheus_Rodrigues_Developer_EN.pdf'),
-    fileName: 'Matheus_Rodrigues_Developer_EN.pdf',
+    href: resumeFile('Matheus_Rodrigues_EN.pdf'),
+    fileName: 'Matheus_Rodrigues_EN.pdf',
     preview: cvPreviewEn,
     previewWidth: 1323,
     previewHeight: 1871,
